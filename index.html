@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew &amp; Bloom Café — Every Cup Tells a Story</title>
+  <meta name="description" content="Brew & Bloom Café, MG Road Vijayawada. Freshly brewed coffee, handcrafted desserts and a cozy atmosphere. Every cup tells a story." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b4226' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 8h1a4 4 0 1 1 0 8h-1'/%3E%3Cpath d='M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z'/%3E%3Cline x1='6' y1='2' x2='6' y2='4'/%3E%3Cline x1='10' y1='2' x2='10' y2='4'/%3E%3Cline x1='14' y1='2' x2='14' y2='4'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ PRELOADER ═══════════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__cup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+          <line x1="6" y1="2" x2="6" y2="4"/>
+          <line x1="10" y1="2" x2="10" y2="4"/>
+          <line x1="14" y1="2" x2="14" y2="4"/>
+        </svg>
+        <span class="preloader__steam preloader__steam--1"></span>
+        <span class="preloader__steam preloader__steam--2"></span>
+        <span class="preloader__steam preloader__steam--3"></span>
+      </div>
+      <p class="preloader__brand">Brew &amp; Bloom</p>
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo" aria-label="Brew and Bloom Café home">
+        <span class="navbar__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+            <line x1="6" y1="2" x2="6" y2="4"/>
+            <line x1="10" y1="2" x2="10" y2="4"/>
+            <line x1="14" y1="2" x2="14" y2="4"/>
+          </svg>
+        </span>
+        <span class="navbar__logo-text">Brew <em>&amp;</em> Bloom<small>Café</small></span>
+      </a>
+
+      <nav class="navbar__links" id="navLinks" aria-label="Primary">
+        <a href="#home" class="navbar__link is-active">Home</a>
+        <a href="#menu" class="navbar__link">Menu</a>
+        <a href="#specials" class="navbar__link">Specials</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#reviews" class="navbar__link">Reviews</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+        <a href="#menu" class="btn btn--accent navbar__cta navbar__cta--mobile">
+          Order Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="navbar__cart" id="cartOpen" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="navbar__cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#menu" class="btn btn--accent navbar__cta">
+          Order Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <button class="navbar__burger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__blob hero__blob--1"></span>
+        <span class="hero__blob hero__blob--2"></span>
+        <span class="hero__grain"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Welcome to Brew &amp; Bloom Café</p>
+          <h1 class="hero__title">Every Cup<br />Tells a <em>Story.</em></h1>
+          <p class="hero__subtitle">Freshly brewed happiness, baked with love, served with warmth.</p>
+          <div class="hero__buttons">
+            <a href="#menu" class="btn btn--primary">
+              Explore Our Menu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--outline">Visit Our Café</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><strong>15<span>+</span></strong><small>Signature Drinks</small></div>
+            <div class="hero__stat"><strong>4.9<span>★</span></strong><small>Guest Rating</small></div>
+            <div class="hero__stat"><strong>2018</strong><small>Est. Vijayawada</small></div>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="hero__img-wrap">
+            <img src="images/hero-latte.jpg" alt="Barista pouring a latte with heart-shaped latte art at Brew and Bloom Café" width="1125" height="750" fetchpriority="high" />
+            <div class="hero__ring" aria-hidden="true"></div>
+
+            <!-- rotating stamp -->
+            <div class="hero__stamp" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <defs>
+                  <path id="stampCircle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
+                </defs>
+                <text>
+                  <textPath href="#stampCircle">BREW &amp; BLOOM • EST. 2018 • VIJAYAWADA</textPath>
+                </text>
+              </svg>
+              <span class="hero__stamp-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.6 6 8c0 1.9.9 3.6 2.2 4.7.5.4.8 1.1.8 1.8V17a1.5 1.5 0 0 0 1.5 1.5h3A1.5 1.5 0 0 0 15 17v-2.5c0-.7.3-1.4.8-1.8C17.1 11.6 18 9.9 18 8c0-3.4-2.5-6-6-6zm-3 17h6v1a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 20v-1z"/></svg>
+              </span>
+            </div>
+
+            <!-- floating badges -->
+            <div class="float-badge float-badge--1">
+              <span class="float-badge__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+              </span>
+              <span>Freshly Brewed</span>
+            </div>
+            <div class="float-badge float-badge--2">
+              <span class="float-badge__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </span>
+              <span>100% Quality Beans</span>
+            </div>
+            <div class="float-badge float-badge--3">
+              <span class="float-badge__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              <span>Made with Love</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="about__img-wrap">
+            <img src="images/about-cafe.jpg" alt="Cozy café interior with warm lights and a rustic wooden bar counter" loading="lazy" decoding="async" />
+            <div class="about__experience">
+              <strong>7<span>+</span></strong>
+              <small>Years of<br />Warmth</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__content reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2 class="section-title">More Than Coffee,<br />It's a <em>Feeling.</em></h2>
+          <p class="about__text">
+            Brew &amp; Bloom is a place where coffee meets creativity. From freshly roasted coffee
+            beans to handcrafted desserts, every detail is designed to make your day a little better.
+            Whether you're catching up with friends, studying, working, or simply relaxing,
+            we have a seat waiting for you.
+          </p>
+          <ul class="about__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Roasted in small batches, served at its peak
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Desserts baked fresh every single morning
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              A quiet corner for every mood and moment
+            </li>
+          </ul>
+          <a href="#reviews" class="btn btn--primary">
+            What Our Guests Say
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="container about__cards">
+        <article class="feature-card reveal">
+          <span class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+          </span>
+          <h3>Freshly Prepared</h3>
+          <p>Every cup is brewed to order and every dessert leaves our oven the same day.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </span>
+          <h3>Carefully Selected Ingredients</h3>
+          <p>Single-origin beans, real chocolate and farm-fresh dairy — nothing artificial, ever.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <h3>Cozy Atmosphere</h3>
+          <p>Warm lights, soft music and the aroma of coffee — a corner made for slowing down.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MENU ═══════════════ -->
+    <section class="section section--tint menu" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our Menu</p>
+          <h2 class="section-title">Crafted for Every <em>Craving.</em></h2>
+          <p class="section-sub">From slow-steeped cold brews to warm, fudgy brownies — explore what's brewing today.</p>
+        </div>
+
+        <div class="menu__filters reveal" id="menuFilters" role="tablist" aria-label="Menu categories">
+          <button class="menu__filter is-active" data-category="all" role="tab" aria-selected="true">All</button>
+          <button class="menu__filter" data-category="coffee" role="tab" aria-selected="false">Coffee</button>
+          <button class="menu__filter" data-category="cold" role="tab" aria-selected="false">Cold Drinks</button>
+          <button class="menu__filter" data-category="desserts" role="tab" aria-selected="false">Desserts</button>
+          <button class="menu__filter" data-category="snacks" role="tab" aria-selected="false">Snacks</button>
+        </div>
+
+        <div class="menu__grid" id="menuGrid"><!-- rendered by js/main.js --></div>
+        <noscript><p class="menu__noscript">Please enable JavaScript to view our interactive menu.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SPECIALS ═══════════════ -->
+    <section class="section specials" id="specials">
+      <div class="specials__bg" aria-hidden="true">
+        <span class="specials__glow specials__glow--1"></span>
+        <span class="specials__glow specials__glow--2"></span>
+      </div>
+
+      <div class="container">
+        <div class="section-head section-head--light reveal">
+          <p class="eyebrow">Signature Specials</p>
+          <h2 class="section-title">Made to Make <em>Your Day.</em></h2>
+          <p class="section-sub">Three creations our baristas are proudest of — limited, seasonal, and unforgettable.</p>
+        </div>
+
+        <div class="specials__list">
+          <article class="special-card reveal">
+            <span class="special-card__num" aria-hidden="true">01</span>
+            <div class="special-card__media">
+              <img src="images/special-signature-latte.jpg" alt="Bloom Signature Latte with delicate rosetta latte art" loading="lazy" decoding="async" />
+            </div>
+            <div class="special-card__body">
+              <h3>Bloom Signature Latte</h3>
+              <p>Our house specialty — double espresso, velvety steamed milk and a delicate rosetta, finished with a whisper of vanilla.</p>
+              <div class="special-card__row">
+                <span class="special-card__price">₹229</span>
+                <button class="btn btn--accent special-card__btn" data-special="signature-latte">
+                  Try This
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="special-card special-card--reverse reveal">
+            <span class="special-card__num" aria-hidden="true">02</span>
+            <div class="special-card__media">
+              <img src="images/special-midnight-brownie.jpg" alt="Midnight Chocolate Brownie with molten dark chocolate heart" loading="lazy" decoding="async" />
+            </div>
+            <div class="special-card__body">
+              <h3>Midnight Chocolate Brownie</h3>
+              <p>Dark, decadent and dangerously fudgy — baked with 70% dark chocolate and a softly molten heart.</p>
+              <div class="special-card__row">
+                <span class="special-card__price">₹199</span>
+                <button class="btn btn--accent special-card__btn" data-special="midnight-brownie">
+                  Try This
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="special-card reveal">
+            <span class="special-card__num" aria-hidden="true">03</span>
+            <div class="special-card__media">
+              <img src="images/special-caramel-frappe.jpg" alt="Golden Caramel Frappe topped with whipped cream and caramel drizzle" loading="lazy" decoding="async" />
+            </div>
+            <div class="special-card__body">
+              <h3>Golden Caramel Frappe</h3>
+              <p>Blended to golden perfection with buttery caramel, clouds of whipped cream and a crunchy praline swirl.</p>
+              <div class="special-card__row">
+                <span class="special-card__price">₹249</span>
+                <button class="btn btn--accent special-card__btn" data-special="caramel-frappe">
+                  Try This
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ REVIEWS ═══════════════ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Customer Reviews</p>
+          <h2 class="section-title">Words That Warm <em>Our Cups.</em></h2>
+          <p class="section-sub">Real moments from real guests — the reason we keep the coffee flowing.</p>
+        </div>
+
+        <div class="reviews__viewport reveal" id="reviewsViewport">
+          <div class="reviews__track" id="reviewsTrack">
+
+            <article class="review-card">
+              <span class="review-card__quote" aria-hidden="true">“</span>
+              <div class="review-card__stars" aria-label="Rated 5 out of 5">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="review-card__text">The coffee is amazing, and the atmosphere is so peaceful. Perfect place to spend my evenings!</p>
+              <footer class="review-card__author">
+                <span class="review-card__avatar" aria-hidden="true">AS</span>
+                <div>
+                  <strong>Ananya Sharma</strong>
+                  <small>Regular Guest</small>
+                </div>
+              </footer>
+            </article>
+
+            <article class="review-card">
+              <span class="review-card__quote" aria-hidden="true">“</span>
+              <div class="review-card__stars" aria-label="Rated 5 out of 5">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="review-card__text">Beautiful interiors, delicious desserts, and friendly staff. Definitely my favorite café!</p>
+              <footer class="review-card__author">
+                <span class="review-card__avatar" aria-hidden="true">RV</span>
+                <div>
+                  <strong>Rohit Verma</strong>
+                  <small>Food Blogger</small>
+                </div>
+              </footer>
+            </article>
+
+            <article class="review-card">
+              <span class="review-card__quote" aria-hidden="true">“</span>
+              <div class="review-card__stars" aria-label="Rated 4.5 out of 5">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><defs><linearGradient id="halfStar"><stop offset="50%" stop-color="#e8a33d"/><stop offset="50%" stop-color="#e3d8ca"/></linearGradient></defs><path fill="url(#halfStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="review-card__text">The caramel latte is a must-try. Everything feels fresh and thoughtfully prepared.</p>
+              <footer class="review-card__author">
+                <span class="review-card__avatar" aria-hidden="true">PN</span>
+                <div>
+                  <strong>Priya Nair</strong>
+                  <small>Weekend Regular</small>
+                </div>
+              </footer>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="reviews__controls reveal">
+          <button class="reviews__arrow" id="reviewPrev" aria-label="Previous review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="reviews__dots" id="reviewDots"></div>
+          <button class="reviews__arrow" id="reviewNext" aria-label="Next review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ GALLERY ═══════════════ -->
+    <section class="section section--tint gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Café Gallery</p>
+          <h2 class="section-title">Moments From <em>Our Corner.</em></h2>
+          <p class="section-sub">A little tour of the place — warm lights, slow pours and sweet company.</p>
+        </div>
+
+        <div class="gallery__grid reveal">
+          <figure class="gallery__item gallery__item--tall">
+            <img src="images/gallery-interior.jpg" alt="Warm café interior with exposed brick and soft lights" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Our Corner</strong><small>Every seat tells a story</small></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/gallery-barista.jpg" alt="Barista crafting espresso with a professional machine" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>The Craft</strong><small>Slow, careful pours</small></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/gallery-latte-art.jpg" alt="Close-up of latte art being poured by a barista" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Latte Art</strong><small>Edible little artworks</small></figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--wide">
+            <img src="images/gallery-desserts.jpg" alt="Assortment of desserts and pastries on a café table" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Sweet Moments</strong><small>Baked every morning</small></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/gallery-friends.jpg" alt="Friends cheering with coffee cups in the café" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Good Company</strong><small>Coffee tastes better shared</small></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/gallery-coffee-beans.jpg" alt="Freshly roasted coffee beans beside a cup on a wooden table" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Fresh Roasts</strong><small>Small-batch &amp; aromatic</small></figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--wide">
+            <img src="images/gallery-friends-2.jpg" alt="Two friends enjoying coffee together at the café" loading="lazy" decoding="async" />
+            <figcaption class="gallery__caption"><strong>Easy Evenings</strong><small>Come as you are</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ OPENING HOURS ═══════════════ -->
+    <section class="section hours" id="hours">
+      <div class="container">
+        <div class="hours__card reveal">
+          <div class="hours__head">
+            <span class="hours__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <h2 class="section-title">Opening <em>Hours</em></h2>
+          </div>
+          <div class="hours__rows">
+            <div class="hours__row">
+              <span class="hours__days">Monday – Friday</span>
+              <span class="hours__dots" aria-hidden="true"></span>
+              <span class="hours__time">8:00 AM – 10:00 PM</span>
+            </div>
+            <div class="hours__row">
+              <span class="hours__days">Saturday – Sunday</span>
+              <span class="hours__dots" aria-hidden="true"></span>
+              <span class="hours__time">9:00 AM – 11:00 PM</span>
+            </div>
+          </div>
+          <p class="hours__message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Your daily dose of happiness is waiting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section section--tint contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Location &amp; Contact</p>
+          <h2 class="section-title">Come Say <em>Hello.</em></h2>
+          <p class="section-sub">Right on MG Road — walk in for a cup, or tell us what's on your mind.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <ul class="contact__list">
+              <li>
+                <span class="contact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <strong>Visit Us</strong>
+                  <p>MG Road, Vijayawada,<br />Andhra Pradesh, India</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <div>
+                  <strong>Call Us</strong>
+                  <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+              </li>
+              <li>
+                <span class="contact__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div>
+                  <strong>Write to Us</strong>
+                  <p><a href="mailto:hello@brewandbloom.in">hello@brewandbloom.in</a></p>
+                </div>
+              </li>
+            </ul>
+            <div class="contact__buttons">
+              <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=MG+Road,+Vijayawada,+Andhra+Pradesh,+India" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Get Directions
+              </a>
+              <button class="btn btn--outline" id="contactUsBtn" type="button">
+                Contact Us
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+
+            <div class="contact__map">
+              <iframe
+                title="Map — Brew & Bloom Café, MG Road, Vijayawada"
+                src="https://www.google.com/maps?q=MG%20Road%2C%20Vijayawada%2C%20Andhra%20Pradesh%2C%20India&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="contact__form-wrap reveal">
+            <h3 class="contact__form-title">Send Us a Message</h3>
+            <p class="contact__form-sub">We usually reply within a day — usually with a recommendation.</p>
+
+            <form class="contact__form" id="contactForm" novalidate>
+              <div class="form-field">
+                <label for="cfName">Your Name</label>
+                <input type="text" id="cfName" name="name" placeholder="e.g. Ananya Sharma" autocomplete="name" />
+                <small class="form-error" data-error-for="cfName"></small>
+              </div>
+              <div class="form-field">
+                <label for="cfEmail">Email Address</label>
+                <input type="email" id="cfEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                <small class="form-error" data-error-for="cfEmail"></small>
+              </div>
+              <div class="form-field">
+                <label for="cfSubject">Subject</label>
+                <input type="text" id="cfSubject" name="subject" placeholder="What's this about?" />
+                <small class="form-error" data-error-for="cfSubject"></small>
+              </div>
+              <div class="form-field">
+                <label for="cfMessage">Message</label>
+                <textarea id="cfMessage" name="message" rows="4" placeholder="Tell us anything — feedback, bookings, events..."></textarea>
+                <small class="form-error" data-error-for="cfMessage"></small>
+              </div>
+              <button type="submit" class="btn btn--accent contact__submit">
+                Send Message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <p class="contact__success" id="contactSuccess" role="status" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Thank you! Your message has been sent — we'll get back to you soon.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="navbar__logo navbar__logo--footer">
+          <span class="navbar__logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+          </span>
+          <span class="navbar__logo-text">Brew <em>&amp;</em> Bloom<small>Café</small></span>
+        </a>
+        <p class="footer__tagline">Every cup tells a story. Freshly brewed happiness, baked with love, served with warmth — right on MG Road, Vijayawada.</p>
+        <div class="footer__socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Opening Hours</h4>
+        <ul class="footer__hours">
+          <li><span>Monday – Friday</span><span>8:00 AM – 10:00 PM</span></li>
+          <li><span>Saturday – Sunday</span><span>9:00 AM – 11:00 PM</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__contact">
+          <li>MG Road, Vijayawada,<br />Andhra Pradesh, India</li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="mailto:hello@brewandbloom.in">hello@brewandbloom.in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 Brew &amp; Bloom Café. All rights reserved.</p>
+        <p class="footer__made">Brewed with <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> in Vijayawada</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ CART DRAWER ═══════════════ -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart__header">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Your Cart
+        <span class="cart__count" id="cartCountDrawer">0</span>
+      </h3>
+      <button class="cart__close" id="cartClose" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="cart__body" id="cartBody">
+      <div class="cart__empty" id="cartEmpty">
+        <span class="cart__empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+        </span>
+        <p>Your cart is empty.</p>
+        <small>Add something warm from our menu.</small>
+        <button class="btn btn--primary cart__empty-btn" id="cartEmptyBtn">Browse the Menu</button>
+      </div>
+      <ul class="cart__items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart__footer" id="cartFooter" hidden>
+      <div class="cart__row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+      <div class="cart__row cart__row--muted"><span>Delivery</span><strong>Free</strong></div>
+      <div class="cart__row cart__row--total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn btn--accent cart__checkout" id="checkoutBtn">
+        Proceed to Checkout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p class="cart__note">Demo cart — no real payment is processed.</p>
+    </div>
+  </aside>
+
+  <!-- ═══════════════ CHECKOUT MODAL ═══════════════ -->
+  <div class="modal" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="Close checkout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <span class="modal__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </span>
+      <h3 id="checkoutTitle">Order Received!</h3>
+      <p class="modal__text" id="checkoutMessage">This is a demo checkout — your order would be on its way.</p>
+      <div class="modal__summary" id="checkoutSummary"></div>
+      <button class="btn btn--primary modal__btn" data-close-modal>Done</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ TOAST ═══════════════ -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastText">Added to cart</span>
+  </div>
+
+  <!-- ═══════════════ BACK TO TOP ═══════════════ -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
