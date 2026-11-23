@@ -3,7 +3,7 @@
 A fully responsive, premium single-page website for a fictional café in Vijayawada, India.
 Built with plain HTML, CSS, and JavaScript — no frameworks, no build step.
 
-**Live demo:** _deploying now — link coming right up_
+**Live demo:** https://brew-and-bloom-amber.vercel.app
 
 ## Features
 
